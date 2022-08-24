@@ -6,5 +6,6 @@ ___
 
 ## Usage
 
-./goocli.sh [any number of words]
-
+```bash
+$ ./goocli.sh [any number of words]
+```
