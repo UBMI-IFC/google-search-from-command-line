@@ -20,5 +20,5 @@ ____
 
 To Do 
 
-[] provide options to manage, web browsers
-[] provide options to manage search engines 
+- [ ] provide options to manage, web browsers
+- [ ] provide options to manage search engines 
