@@ -33,7 +33,3 @@ If no arguments are provided other than search terms it will search at google.co
 | `-k`  | KEGG  |
 | `-y`  | YouTube  |
 | `-p`  | Pubmed  |
-
-
-
-
