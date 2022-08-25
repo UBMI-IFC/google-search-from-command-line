@@ -1,24 +1,39 @@
 # Search in Google from CLI 
 
-Really simple code to Google search CLI provided terms into default graphical web browser (x-www-browser)
+This scripts start a web search from the command line interface.
 
 ___
 
 ## Usage
 
 ```bash
-$ ./goocli.sh [any number of words]
+$ ./clisearch.sh [-CQFnksydph] [Words to be searched]
 ```
-or 
 
-```bash
-$ ./qtcli.sh [any number of words]
-``` 
-To use [qutebrowser](https://qutebrowser.org/) instead of default graphical web browser
+If no arguments are provided other than search terms it will search at google.com using the default browser (depends on x-www-browser variable on the OS)
 
-____
+## Arguments
 
-To Do 
+### Browser 
 
-[] provide options to manage, web browsers
-[] provide options to manage search engines 
+| option  | browser  |
+|---|---|
+| `-C`  | Google Chrome  |
+| `-Q`  | qutebrowser  |
+| `-F`  | Mozilla Firefox  |
+
+
+### Web sites
+
+| option  | site  |
+|---|---|
+| `-d`  | DuckDuckGo  |
+| `-n`  | NCBI  |
+| `-s`  | Semantic Scholar  |
+| `-k`  | KEGG  |
+| `-y`  | YouTube  |
+| `-p`  | Pubmed  |
+
+
+
+
