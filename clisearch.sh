@@ -65,5 +65,5 @@ do
     esac
 done
 
-QUERY=$( echo $@ | sed -r 's/-[a-z]*//g' | sed 's/ /+/g' | sed -r 's/^\++//')
+QUERY=$( echo $@ | sed -r 's/-[a-zA-Z]*//g' | sed 's/ /+/g' | sed -r 's/^\++//')
 $WBROW $SITE$QUERY & 2> /dev/null
