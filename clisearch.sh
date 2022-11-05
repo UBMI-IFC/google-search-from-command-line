@@ -43,7 +43,7 @@ Help()
 
 
 
-WBROW='x-www-browser'
+WBROW='x-www-browser' # this work fine on OS/Desktops with that environment it is posible to set this as an alias or to an environment variable
 SITE='https://www.google.com/search?q='
 
 while getopts CQFhnksyd flag
