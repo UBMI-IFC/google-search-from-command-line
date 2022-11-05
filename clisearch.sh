@@ -26,6 +26,7 @@ Help()
     echo "OPTIONS:"
     echo "         Browser"
     echo "                  -C - - - - - Google Chrome"
+    echo "                  -O - - - - - Google Chrome from Flatpak"
     echo "                  -Q - - - - - qutebrowser"
     echo "                  -F - - - - - Mozilla Firefox"
     echo "         Web site"
@@ -46,12 +47,13 @@ Help()
 WBROW='x-www-browser'
 SITE='https://www.google.com/search?q='
 
-while getopts CQFhnksyd flag
+while getopts CQFOhnksyd flag
 do
     case $flag in
         h) Help
            exit;;
         C) WBROW=google-chrome;;
+	    O) WBROW="flatpak run com.google.Chrome";;
         Q) WBROW=qutebrowser;;
         F) WBROW=firefox;;
         n) SITE='https://www.ncbi.nlm.nih.gov/search/all/?term=';;
@@ -66,4 +68,4 @@ do
 done
 
 QUERY=$( echo $@ | sed -r 's/-[a-zA-Z]*//g' | sed 's/ /+/g' | sed -r 's/^\++//')
-x$WBROW $SITE$QUERY & 2> /dev/null
+$WBROW $SITE$QUERY & 2> /dev/null
