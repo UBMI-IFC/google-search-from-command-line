@@ -43,8 +43,7 @@ Help()
 
 
 
-#WBROW='x-www-browser' # uncomment this if your OS have this ENV variable
-WBROW='BROWSER'
+WBROW='x-www-browser'
 SITE='https://www.google.com/search?q='
 
 while getopts CQFhnksyd flag
@@ -67,4 +66,4 @@ do
 done
 
 QUERY=$( echo $@ | sed -r 's/-[a-zA-Z]*//g' | sed 's/ /+/g' | sed -r 's/^\++//')
-$WBROW $SITE$QUERY & 2> /dev/null
+x$WBROW $SITE$QUERY & 2> /dev/null
