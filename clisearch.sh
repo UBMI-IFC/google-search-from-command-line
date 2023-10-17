@@ -26,6 +26,7 @@ Help()
     echo "OPTIONS:"
     echo "         Browser"
     echo "                  -C - - - - - Google Chrome"
+    echo "                  -O - - - - - Google Chrome from Flatpak"
     echo "                  -Q - - - - - qutebrowser"
     echo "                  -F - - - - - Mozilla Firefox"
     echo "                  -L - - - - - w3m  "
@@ -47,12 +48,17 @@ Help()
 WBROW='/usr/bin/x-www-browser'
 SITE='https://www.google.com/search?q='
 
+<<<<<<< HEAD
 while getopts CQFLhnksyd flag
+=======
+while getopts CQFOhnksyd flag
+>>>>>>> e8e0b473658de1558231c67163d04cfdc8a98499
 do
     case $flag in
         h) Help
            exit;;
         C) WBROW=google-chrome;;
+	    O) WBROW="flatpak run com.google.Chrome";;
         Q) WBROW=qutebrowser;;
         F) WBROW=firefox;;
         L) WBROW='links';;

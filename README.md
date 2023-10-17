@@ -1,6 +1,6 @@
 # Search in Google from CLI 
 
-This scripts start a web search from the command line interface.
+This script start a web search from the command line interface.
 
 ___
 
