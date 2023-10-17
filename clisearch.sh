@@ -28,6 +28,7 @@ Help()
     echo "                  -C - - - - - Google Chrome"
     echo "                  -Q - - - - - qutebrowser"
     echo "                  -F - - - - - Mozilla Firefox"
+    echo "                  -L - - - - - w3m  "
     echo "         Web site"
     echo "                  -d - - - - - DuckDuckGo"
     echo "                  -n - - - - - NCBI"
@@ -43,10 +44,10 @@ Help()
 
 
 
-WBROW='x-www-browser'
+WBROW='/usr/bin/x-www-browser'
 SITE='https://www.google.com/search?q='
 
-while getopts CQFhnksyd flag
+while getopts CQFLhnksyd flag
 do
     case $flag in
         h) Help
@@ -54,6 +55,7 @@ do
         C) WBROW=google-chrome;;
         Q) WBROW=qutebrowser;;
         F) WBROW=firefox;;
+        L) WBROW='links';;
         n) SITE='https://www.ncbi.nlm.nih.gov/search/all/?term=';;
         k) SITE='https://www.genome.jp/dbget-bin/www_bfind_sub?mode=bfind&max_hit=1000&dbkey=kegg&keywords=';;
         s) SITE='https://www.semanticscholar.org/search?q=';;
@@ -66,4 +68,11 @@ do
 done
 
 QUERY=$( echo $@ | sed -r 's/-[a-zA-Z]*//g' | sed 's/ /+/g' | sed -r 's/^\++//')
-$WBROW $SITE$QUERY & 2> /dev/null
+
+if [[ $WBROW == "links" ]]; then
+  $WBROW $SITE$QUERY
+else
+  $WBROW $SITE$QUERY & 2> /dev/null
+fi
+
+
