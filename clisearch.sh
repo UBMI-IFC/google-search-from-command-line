@@ -29,7 +29,7 @@ Help()
     echo "                  -O - - - - - Google Chrome from Flatpak"
     echo "                  -Q - - - - - qutebrowser"
     echo "                  -F - - - - - Mozilla Firefox"
-    echo "                  -L - - - - - w3m  "
+    echo "                  -L - - - - - links (CLI)  "
     echo "         Web site"
     echo "                  -d - - - - - DuckDuckGo"
     echo "                  -n - - - - - NCBI"
