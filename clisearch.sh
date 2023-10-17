@@ -54,7 +54,7 @@ do
         h) Help
            exit;;
         C) WBROW=google-chrome;;
-	    O) WBROW="flatpak run com.google.Chrome";;
+	      O) WBROW="flatpak run com.google.Chrome";;
         Q) WBROW=qutebrowser;;
         F) WBROW=firefox;;
         L) WBROW='links';;
