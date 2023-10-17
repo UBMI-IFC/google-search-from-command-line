@@ -29,7 +29,7 @@ Help()
     echo "                  -O - - - - - Google Chrome from Flatpak"
     echo "                  -Q - - - - - qutebrowser"
     echo "                  -F - - - - - Mozilla Firefox"
-    echo "                  -L - - - - - links (CLI)  "
+    echo "                  -L - - - - - links (CLI)"
     echo "         Web site"
     echo "                  -d - - - - - DuckDuckGo"
     echo "                  -n - - - - - NCBI"
@@ -48,11 +48,7 @@ Help()
 WBROW='/usr/bin/x-www-browser'
 SITE='https://www.google.com/search?q='
 
-<<<<<<< HEAD
 while getopts CQFLhnksyd flag
-=======
-while getopts CQFOhnksyd flag
->>>>>>> e8e0b473658de1558231c67163d04cfdc8a98499
 do
     case $flag in
         h) Help
